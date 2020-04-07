@@ -27,7 +27,6 @@ import panda.leatherworks.common.crafting.DryingRecipes;
 import panda.leatherworks.common.crafting.FakeRecipe;
 import panda.leatherworks.common.crafting.LeatherPackColoring;
 import panda.leatherworks.common.crafting.LeatherTrunkColoring;
-import panda.leatherworks.common.crafting.RepairKitRecipe;
 
 @EventBusSubscriber
 public class LWRecipes {
@@ -46,15 +45,6 @@ public class LWRecipes {
 	  public static void registerRecipes(Register<IRecipe> event) {
 	    IForgeRegistry<IRecipe> registry = event.getRegistry();
 
-	    registry.register(new RepairKitRecipe(LWItems.BROKEN_LEATHER_CHESTPLATE, LWItems.LEATHER_CHESTPLATE, LWItems.REPAIR_KIT, 20));
-	    registry.register(new RepairKitRecipe(LWItems.BROKEN_LEATHER_HELMET, LWItems.LEATHER_HELMET, LWItems.REPAIR_KIT, 20));
-	    registry.register(new RepairKitRecipe(LWItems.BROKEN_LEATHER_BOOTS, LWItems.LEATHER_BOOTS, LWItems.REPAIR_KIT, 20));
-	    registry.register(new RepairKitRecipe(LWItems.BROKEN_LEATHER_LEGGINGS, LWItems.LEATHER_LEGGINGS, LWItems.REPAIR_KIT, 20));
-	    
-	    registry.register(new RepairKitRecipe(LWItems.LEATHER_BOOTS, LWItems.LEATHER_BOOTS, LWItems.REPAIR_KIT, 20));
-	    registry.register(new RepairKitRecipe(LWItems.LEATHER_LEGGINGS, LWItems.LEATHER_LEGGINGS, LWItems.REPAIR_KIT, 20));
-	    registry.register(new RepairKitRecipe(LWItems.LEATHER_HELMET, LWItems.LEATHER_HELMET, LWItems.REPAIR_KIT, 20));
-	    registry.register(new RepairKitRecipe(LWItems.LEATHER_CHESTPLATE, LWItems.LEATHER_CHESTPLATE, LWItems.REPAIR_KIT, 20));
 	    registry.register(new LeatherTrunkColoring());
 	    registry.register(new LeatherPackColoring());
 	  }

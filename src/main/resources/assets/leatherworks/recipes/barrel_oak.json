@@ -1,31 +1,17 @@
 {
-    "conditions": [{
-        "type": "minecraft:item_exists",
-        "item": "leatherworks:barrel_oak"
-    }],
-  "type": "forge:ore_shaped",
-  "pattern": [
-
-    "P P",
-
-    "P P",
-
-    "PPP"
-
-  ],
-
-  "key": {
-
-    "P": {
-
-      "type": "forge:ore_dict",
-      "ore": "plankWood"
-    }
-  },
-
   "result": {
-
     "item": "leatherworks:barrel_oak"
+  },
+  "pattern": [
+    "P P",
+    "P P",
+    "PPP"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "P": {
+      "item": "minecraft:planks",
+      "data":0
+    }
   }
-
 }
