@@ -8,9 +8,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import panda.leatherworks.ConfigLeatherWorks;
-import panda.leatherworks.LeatherWorks;
 import panda.leatherworks.client.gui.GuiPack;
-import panda.leatherworks.common.item.armor.ItemBrokenArmor;
 
 public class TooltipEventHandler {
 	@SideOnly(Side.CLIENT)

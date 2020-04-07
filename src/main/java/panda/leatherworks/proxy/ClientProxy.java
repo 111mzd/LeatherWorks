@@ -2,7 +2,6 @@ package panda.leatherworks.proxy;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.client.renderer.block.statemap.StateMapperBase;
 import net.minecraft.item.Item;
@@ -18,7 +17,6 @@ import panda.leatherworks.LeatherWorks;
 import panda.leatherworks.client.network.messagehandler.MessageUpdateRackHandler;
 import panda.leatherworks.client.renderer.tileentity.TileEntityDryingRackRenderer;
 import panda.leatherworks.client.renderer.tileentity.TileEntityTrunkRenderer;
-import panda.leatherworks.common.item.armor.ItemBrokenArmor;
 import panda.leatherworks.common.network.MessageUpdateRack;
 import panda.leatherworks.common.tileentity.TileEntityDryingRack;
 import panda.leatherworks.common.tileentity.TileEntityTrunk;
@@ -78,13 +76,9 @@ public class ClientProxy extends CommonProxy {
 		
 		registerItemModel(LWItems.TANNIN_BOTTLE);
 		registerItemModel(LWItems.TANNIN_BALL);
-		registerItemModel(LWItems.REPAIR_KIT);
 		registerItemModel(LWItems.LEATHER_SOAKED);
 		registerItemModel(LWItems.LEATHER_SCRAPED);
 		registerItemModel(LWItems.LEATHER_WASHED);
-		
-		registerItemModel(LWItems.LEATHER_STRIP);
-		registerItemModel(LWItems.LEATHER_SHEET);
 		
 		registerBlockModel(LWBlocks.DEBARKED_LOG_OAK);
 		registerBlockModel(LWBlocks.DEBARKED_LOG_ACACIA);

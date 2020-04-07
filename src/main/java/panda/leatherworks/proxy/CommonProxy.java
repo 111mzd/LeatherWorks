@@ -27,9 +27,7 @@ public class CommonProxy {
 		registerHide(LWItems.RAWHIDE_WOLF);
 		registerHide(LWItems.RAWHIDE_DEER);
 		registerHide(LWItems.RAWHIDE_BOAR);
-		
-		OreDictionary.registerOre("leatherSheet", LWItems.LEATHER_SHEET);
-		OreDictionary.registerOre("leatherStrip", LWItems.LEATHER_STRIP);
+
 		OreDictionary.registerOre("barkAcacia", LWItems.BARK_ACACIA);
 		OreDictionary.registerOre("barkBirch", LWItems.BARK_BIRCH);
 		OreDictionary.registerOre("barkDarkOak", LWItems.BARK_DARKOAK);

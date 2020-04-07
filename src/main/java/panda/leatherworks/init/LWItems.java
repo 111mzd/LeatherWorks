@@ -43,7 +43,6 @@ public final class LWItems {
 
 	public static final Item TANNIN_BOTTLE = simply(new Item(), "tannin_bottle");
 	public static final Item TANNIN_BALL = simply(new Item(), "tannin_ball");
-	public static final Item REPAIR_KIT = simply(new Item(), "repair_kit").setMaxStackSize(16);
 
 	public static final Item LEATHER_SCRAPED = simply(new ItemCraftingLeather(), "crafting_leather_scraped");
 	public static final Item LEATHER_WASHED = simply(new ItemCraftingLeather(), "crafting_leather_washed");
@@ -66,8 +65,6 @@ public final class LWItems {
 	public static final Item PACK_SILVER = simply(new ItemPack(), "pack_"+EnumDyeColor.SILVER.getName().toLowerCase());
 
 	public static final Item ENDER_PACK = simply(new ItemEnderPack(), "ender_pack");
-	public static final Item LEATHER_STRIP = simply(new Item(), "leather_strip");
-	public static final Item LEATHER_SHEET = simply(new Item(), "leather_sheet");
 
 	public static final Item RAWHIDE_DEER = simply(new Item(), "rawhide_deer");
 	public static final Item RAWHIDE_BOAR = simply(new Item(), "rawhide_boar");
@@ -104,9 +101,6 @@ public final class LWItems {
 		registry.register(BARK_DARKOAK);
 		registry.register(TANNIN_BALL);
 		registry.register(TANNIN_BOTTLE);
-		registry.register(LEATHER_STRIP);
-		registry.register(LEATHER_SHEET);
-		registry.register(REPAIR_KIT);
 		
 		if(!ConfigLeatherWorks.disableAllPacks){
 			registry.register(PACK_BROWN);
