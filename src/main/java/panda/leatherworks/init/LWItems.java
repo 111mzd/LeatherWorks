@@ -2,7 +2,6 @@ package panda.leatherworks.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.EnumDyeColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -17,8 +16,6 @@ import panda.leatherworks.LeatherWorks;
 import panda.leatherworks.common.item.ItemCraftingLeather;
 import panda.leatherworks.common.item.ItemEnderPack;
 import panda.leatherworks.common.item.ItemPack;
-import panda.leatherworks.common.item.armor.ItemBrokenArmor;
-import panda.leatherworks.common.item.armor.ItemLeatherworksArmor;
 
 @EventBusSubscriber
 public final class LWItems {
@@ -71,16 +68,6 @@ public final class LWItems {
 	public static final Item ENDER_PACK = simply(new ItemEnderPack(), "ender_pack");
 	public static final Item LEATHER_STRIP = simply(new Item(), "leather_strip");
 	public static final Item LEATHER_SHEET = simply(new Item(), "leather_sheet");
-	
-	public static final Item BROKEN_LEATHER_HELMET = simply(new ItemBrokenArmor(EntityEquipmentSlot.HEAD), "broken_leather_helmet");
-	public static final Item BROKEN_LEATHER_CHESTPLATE = simply(new ItemBrokenArmor(EntityEquipmentSlot.CHEST), "broken_leather_chestplate");
-	public static final Item BROKEN_LEATHER_LEGGINGS = simply(new ItemBrokenArmor(EntityEquipmentSlot.LEGS), "broken_leather_leggings");
-	public static final Item BROKEN_LEATHER_BOOTS = simply(new ItemBrokenArmor(EntityEquipmentSlot.FEET), "broken_leather_boots");
-	
-	public static final Item LEATHER_HELMET = new ItemLeatherworksArmor(ItemArmor.ArmorMaterial.LEATHER, EntityEquipmentSlot.HEAD, BROKEN_LEATHER_HELMET).setTranslationKey("minecraft.leather_helmet").setRegistryName("minecraft:leather_helmet");
-	public static final Item LEATHER_CHESTPLATE = new ItemLeatherworksArmor(ItemArmor.ArmorMaterial.LEATHER, EntityEquipmentSlot.CHEST , BROKEN_LEATHER_CHESTPLATE).setTranslationKey("minecraft.leather_chestplate").setRegistryName("minecraft:leather_chestplate");
-	public static final Item LEATHER_LEGGINGS = new ItemLeatherworksArmor(ItemArmor.ArmorMaterial.LEATHER, EntityEquipmentSlot.LEGS, BROKEN_LEATHER_LEGGINGS).setTranslationKey("minecraft.leather_leggings").setRegistryName("minecraft:leather_leggings");
-	public static final Item LEATHER_BOOTS = new ItemLeatherworksArmor(ItemArmor.ArmorMaterial.LEATHER, EntityEquipmentSlot.FEET, BROKEN_LEATHER_BOOTS).setTranslationKey("minecraft.leather_boots").setRegistryName("minecraft:leather_boots");
 
 	public static final Item RAWHIDE_DEER = simply(new Item(), "rawhide_deer");
 	public static final Item RAWHIDE_BOAR = simply(new Item(), "rawhide_boar");
@@ -143,15 +130,6 @@ public final class LWItems {
 				registry.register(ENDER_PACK);
 			}
 		}
-		
-		registry.register(BROKEN_LEATHER_HELMET);
-		registry.register(BROKEN_LEATHER_CHESTPLATE);
-		registry.register(BROKEN_LEATHER_LEGGINGS);
-		registry.register(BROKEN_LEATHER_BOOTS);
-		registry.register(LEATHER_HELMET);
-		registry.register(LEATHER_CHESTPLATE);
-		registry.register(LEATHER_LEGGINGS);
-		registry.register(LEATHER_BOOTS);
 		
 		registerItemBlock(registry, LWBlocks.BARREL_OAK);
 		registerItemBlock(registry, LWBlocks.BARREL_SPRUCE);

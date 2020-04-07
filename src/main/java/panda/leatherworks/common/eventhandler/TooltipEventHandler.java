@@ -19,27 +19,6 @@ public class TooltipEventHandler {
 		if (Minecraft.getMinecraft().currentScreen instanceof GuiPack &&
 				ConfigLeatherWorks.isBlacklistedFromBag(event.getItemStack())) {
 			event.getToolTip().add(TextFormatting.RED + I18n.format("leatherworks.item_not_allowed.tooltip"));
-		}else
-		if(event.getItemStack().getItem() instanceof ItemBrokenArmor){
-			//event.getToolTip().remove(1); //iffy?
-			
-			String key = I18n.format("item.modifiers.feet");
-			
-			if(event.getToolTip().contains(key)){
-				event.getToolTip().remove(key);
-			}
-			key = I18n.format("item.modifiers.legs");
-			if(event.getToolTip().contains(key)){
-				event.getToolTip().remove(key);
-			}
-			key = I18n.format("item.modifiers.chest");
-			if(event.getToolTip().contains(key)){
-				event.getToolTip().remove(key);
-			}
-			key = I18n.format("item.modifiers.head");
-			if(event.getToolTip().contains(key)){
-				event.getToolTip().remove(key);
-			}
 		}
 	}
 }

@@ -33,17 +33,6 @@ public class ClientProxy extends CommonProxy {
 		wrapper.registerMessage(new MessageUpdateRackHandler(), MessageUpdateRack.class, 0, Side.CLIENT);
 	}
 
-	@Override
-	public void registerColorHandlers() {
-		Minecraft.getMinecraft().getItemColors().registerItemColorHandler(
-			(stack, tintIndex) -> tintIndex > 0 ? 0xFFFFFF : ((ItemBrokenArmor) stack.getItem()).getColor(stack),
-			LWItems.BROKEN_LEATHER_CHESTPLATE,
-			LWItems.BROKEN_LEATHER_HELMET,
-			LWItems.BROKEN_LEATHER_LEGGINGS,
-			LWItems.BROKEN_LEATHER_BOOTS
-		);
-	}
-
 	@SubscribeEvent
     public static void registerModels(ModelRegistryEvent event) {
 		registerItemModel(LWItems.RAWHIDE_COW);
@@ -96,10 +85,6 @@ public class ClientProxy extends CommonProxy {
 		
 		registerItemModel(LWItems.LEATHER_STRIP);
 		registerItemModel(LWItems.LEATHER_SHEET);
-		registerItemModel(LWItems.BROKEN_LEATHER_HELMET);
-		registerItemModel(LWItems.BROKEN_LEATHER_CHESTPLATE);
-		registerItemModel(LWItems.BROKEN_LEATHER_LEGGINGS);
-		registerItemModel(LWItems.BROKEN_LEATHER_BOOTS);
 		
 		registerBlockModel(LWBlocks.DEBARKED_LOG_OAK);
 		registerBlockModel(LWBlocks.DEBARKED_LOG_ACACIA);
