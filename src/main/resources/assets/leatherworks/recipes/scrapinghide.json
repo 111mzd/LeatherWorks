@@ -1,20 +1,20 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:flint"
-    },
-    {
-      "type": "forge:ore_dict",
-      "ore": "rawhide"
-    },
-    {
-      "type": "forge:ore_dict",
-      "ore": "rawhide"
-    }
-  ],
-  "result": {
-    "item": "leatherworks:crafting_leather_scraped",
-    "count": 2
-  }
+{  
+   "type":"minecraft:crafting_shapeless",
+   "ingredients":[  
+      {  
+         "item":"minecraft:flint"
+      },
+      {  
+         "type":"forge:ore_dict",
+	"ore":"rawhide"
+      },
+      {
+         "type":"forge:ore_dict",
+         "ore":"rawhide"
+      }
+   ],
+   "result":{  
+      "item":"leatherworks:crafting_leather_scraped",
+      "count": 2
+   }
 }

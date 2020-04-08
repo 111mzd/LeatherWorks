@@ -8,9 +8,9 @@
   "key": {
     "P": {
       "item": "minecraft:planks",
-      "data": 1
+	  "data":1
     },
-    "L": {
+  "L": {
       "item": "minecraft:wooden_pressure_plate"
     }
   },

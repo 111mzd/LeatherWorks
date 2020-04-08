@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "leatherworks:acacia_bark"
+    "variants": {
+        "normal": { "model": "leatherworks:acacia_bark" }
     }
-  }
 }

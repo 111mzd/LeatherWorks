@@ -1,18 +1,15 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type":"minecraft:crafting_shapeless",
+
   "ingredients": [
-    {
-      "item": "minecraft:flint"
-    },
-    {
-      "item": "minecraft:rabbit_hide"
-    },
-    {
-      "item": "minecraft:rabbit_hide"
-    }
-  ],
+        { "item": "minecraft:flint"},
+	{ "item": "minecraft:rabbit_hide"},
+    { "item": "minecraft:rabbit_hide"}
+    ],
   "result": {
+
     "item": "leatherworks:crafting_leather_scraped",
     "count": 2
   }
+
 }

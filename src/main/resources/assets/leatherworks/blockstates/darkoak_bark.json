@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "leatherworks:darkoak_bark"
+    "variants": {
+        "normal": { "model": "leatherworks:darkoak_bark" }
     }
-  }
 }
