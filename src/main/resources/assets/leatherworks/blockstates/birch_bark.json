@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "leatherworks:birch_bark" }
+  "variants": {
+    "normal": {
+      "model": "leatherworks:birch_bark"
     }
+  }
 }
