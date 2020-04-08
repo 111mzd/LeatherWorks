@@ -25,8 +25,6 @@ import panda.leatherworks.ConfigLeatherWorks;
 import panda.leatherworks.LeatherWorks;
 import panda.leatherworks.common.crafting.DryingRecipes;
 import panda.leatherworks.common.crafting.FakeRecipe;
-import panda.leatherworks.common.crafting.LeatherPackColoring;
-import panda.leatherworks.common.crafting.LeatherTrunkColoring;
 
 @EventBusSubscriber
 public class LWRecipes {
@@ -45,8 +43,6 @@ public class LWRecipes {
 	  public static void registerRecipes(Register<IRecipe> event) {
 	    IForgeRegistry<IRecipe> registry = event.getRegistry();
 
-	    registry.register(new LeatherTrunkColoring());
-	    registry.register(new LeatherPackColoring());
 	  }
 
 	public static void removeFurnaceRecipe(ItemStack resultItem) {

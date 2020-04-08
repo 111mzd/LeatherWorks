@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 
 import panda.leatherworks.ConfigLeatherWorks;
 import panda.leatherworks.common.item.ItemCraftingLeather;
-import panda.leatherworks.common.item.ItemPack;
 import panda.leatherworks.init.LWBlocks;
 import panda.leatherworks.init.LWItems;
 import net.minecraft.block.Block;
@@ -41,7 +40,6 @@ import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fluids.Fluid;
@@ -328,23 +326,6 @@ public class BlockBarrel extends Block
                 
                 return true;
             }
-            else if (level > 0 && (item instanceof ItemPack ) && f == 0 && item != LWItems.PACK_BROWN && !worldIn.isRemote)
-            {
-            	
-            	// Use Pack
-                ItemStack stackout = new ItemStack(LWItems.PACK_BROWN);
-                if(heldItem.hasTagCompound())
-                {
-                	stackout.setTagCompound(heldItem.getTagCompound().copy());
-                }
-                
-                playerIn.setHeldItem(hand, stackout);
-                this.setFluidLevel(worldIn, pos, state, level - 1);
-                playerIn.addStat(StatList.ARMOR_CLEANED);
-                worldIn.playSound(null, pos, SoundEvents.ENTITY_GENERIC_SPLASH, SoundCategory.BLOCKS, 1f, 1f);
-                
-                return true;
-            }
             else
             {
             	return false;
@@ -515,20 +496,6 @@ public class BlockBarrel extends Block
                 this.setFluidLevel(worldIn, pos, state, level - 1);
                 playerIn.addStat(StatList.ARMOR_CLEANED);
             }
-        }
-        
-        if (level > 0 && (item instanceof ItemPack ) && fluid == 0 && item != LWItems.PACK_BROWN && !worldIn.isRemote)
-        {
-        	ItemStack stackout = new ItemStack(LWItems.PACK_BROWN);
-        	if(heldItem.hasTagCompound())
-        	{
-        		stackout.setTagCompound(heldItem.getTagCompound().copy());
-			}
-        	
-        	playerIn.setHeldItem(hand, stackout);
-            this.setFluidLevel(worldIn, pos, state, level - 1);
-            playerIn.addStat(StatList.ARMOR_CLEANED);
-            worldIn.playSound(null, pos, SoundEvents.ENTITY_GENERIC_SPLASH, SoundCategory.BLOCKS, 1f, 1f);
         }
     }
     

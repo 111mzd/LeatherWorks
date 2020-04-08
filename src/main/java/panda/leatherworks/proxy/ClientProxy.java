@@ -16,10 +16,8 @@ import panda.leatherworks.ConfigLeatherWorks;
 import panda.leatherworks.LeatherWorks;
 import panda.leatherworks.client.network.messagehandler.MessageUpdateRackHandler;
 import panda.leatherworks.client.renderer.tileentity.TileEntityDryingRackRenderer;
-import panda.leatherworks.client.renderer.tileentity.TileEntityTrunkRenderer;
 import panda.leatherworks.common.network.MessageUpdateRack;
 import panda.leatherworks.common.tileentity.TileEntityDryingRack;
-import panda.leatherworks.common.tileentity.TileEntityTrunk;
 import panda.leatherworks.init.LWBlocks;
 import panda.leatherworks.init.LWItems;
 
@@ -44,29 +42,7 @@ public class ClientProxy extends CommonProxy {
 		registerItemModel(LWItems.RAWHIDE_MULE);
 		registerItemModel(LWItems.RAWHIDE_DEER);
 		registerItemModel(LWItems.RAWHIDE_BOAR);
-		
-		if(!ConfigLeatherWorks.disableAllPacks){
-			registerItemModel(LWItems.PACK_BROWN);
-			if(!ConfigLeatherWorks.disableColoredPacks){
-				registerItemModel(LWItems.PACK_RED);
-				registerItemModel(LWItems.PACK_BLACK);
-				registerItemModel(LWItems.PACK_BLUE); 
-				registerItemModel(LWItems.PACK_CYAN); 
-				registerItemModel(LWItems.PACK_GRAY); 
-				registerItemModel(LWItems.PACK_GREEN);
-				registerItemModel(LWItems.PACK_LIGHT_BLUE);
-				registerItemModel(LWItems.PACK_LIME); 
-				registerItemModel(LWItems.PACK_MAGENTA);
-				registerItemModel(LWItems.PACK_ORANGE);
-				registerItemModel(LWItems.PACK_PINK); 
-				registerItemModel(LWItems.PACK_PURPLE);
-				registerItemModel(LWItems.PACK_YELLOW);
-				registerItemModel(LWItems.PACK_SILVER);
-			}
-			if(!ConfigLeatherWorks.disableEnderPack){
-				registerItemModel(LWItems.ENDER_PACK);
-			}
-		}
+
 		registerItemModel(LWItems.BARK_OAK);
 		registerItemModel(LWItems.BARK_ACACIA);
 		registerItemModel(LWItems.BARK_BIRCH);
@@ -110,25 +86,6 @@ public class ClientProxy extends CommonProxy {
 		registerBlockModel(LWBlocks.SEALED_BARREL_ACACIA);
 		registerBlockModel(LWBlocks.BARREL_DARKOAK);
 		registerBlockModel(LWBlocks.SEALED_BARREL_DARKOAK);
-		if(!ConfigLeatherWorks.disableTrunk){
-		registerBlockModel(LWBlocks.LEATHER_TRUNK);
-		  if(!ConfigLeatherWorks.disableColoredTrunks){
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_RED);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_ORANGE);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_YELLOW);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_LIME);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_GREEN);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_CYAN);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_LIGHT_BLUE);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_BLUE);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_PURPLE);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_MAGENTA);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_PINK);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_SILVER);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_GRAY);
-			registerBlockModel(LWBlocks.LEATHER_TRUNK_BLACK);
-		  }
-		}
 		
 		ModelLoader.setCustomStateMapper(LWBlocks.TANNIN, new StateMapperBase() {
 			@Override
@@ -138,9 +95,6 @@ public class ClientProxy extends CommonProxy {
 		});
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityDryingRack.class, new TileEntityDryingRackRenderer());
-		if(!ConfigLeatherWorks.disableTrunk){
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTrunk.class, new TileEntityTrunkRenderer());
-		}
 	}
 
 	private static void registerBlockModel(Block block) {

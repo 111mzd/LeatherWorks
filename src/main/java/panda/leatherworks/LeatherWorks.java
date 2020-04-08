@@ -14,14 +14,11 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import panda.leatherworks.common.GuiHandler;
 import panda.leatherworks.common.eventhandler.BucketHandler;
 import panda.leatherworks.common.eventhandler.DebarkHandler;
 import panda.leatherworks.common.eventhandler.LivingDropsHandler;
-import panda.leatherworks.common.eventhandler.TooltipEventHandler;
 import panda.leatherworks.common.registries.BarkRegistry;
 import panda.leatherworks.common.tileentity.TileEntityDryingRack;
-import panda.leatherworks.common.tileentity.TileEntityTrunk;
 import panda.leatherworks.init.LWItems;
 import panda.leatherworks.init.LWRecipes;
 import panda.leatherworks.proxy.CommonProxy;
@@ -53,19 +50,12 @@ public class LeatherWorks {
 		MinecraftForge.EVENT_BUS.register(new LivingDropsHandler());
 		MinecraftForge.EVENT_BUS.register(new BucketHandler());
 		MinecraftForge.EVENT_BUS.register(new DebarkHandler());
-		MinecraftForge.EVENT_BUS.register(new TooltipEventHandler());
-
-		NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
 
 		GameRegistry.registerTileEntity(TileEntityDryingRack.class, "leatherworks:drying_rack");
-		if(!ConfigLeatherWorks.disableTrunk){
-			GameRegistry.registerTileEntity(TileEntityTrunk.class, "leatherworks:leather_trunk");
-		}
 	}
 
 	@EventHandler
 	public void init(FMLInitializationEvent event){
-		ConfigLeatherWorks.parseBlacklist();
 		BarkRegistry.initBarks();
 		proxy.registerColorHandlers();
 		proxy.registerOreDicts();

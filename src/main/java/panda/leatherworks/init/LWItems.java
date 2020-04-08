@@ -14,8 +14,6 @@ import net.minecraftforge.registries.IForgeRegistry;
 import panda.leatherworks.ConfigLeatherWorks;
 import panda.leatherworks.LeatherWorks;
 import panda.leatherworks.common.item.ItemCraftingLeather;
-import panda.leatherworks.common.item.ItemEnderPack;
-import panda.leatherworks.common.item.ItemPack;
 
 @EventBusSubscriber
 public final class LWItems {
@@ -47,24 +45,6 @@ public final class LWItems {
 	public static final Item LEATHER_SCRAPED = simply(new ItemCraftingLeather(), "crafting_leather_scraped");
 	public static final Item LEATHER_WASHED = simply(new ItemCraftingLeather(), "crafting_leather_washed");
 	public static final Item LEATHER_SOAKED = simply(new ItemCraftingLeather(), "crafting_leather_soaked");
-	
-	public static final Item PACK_RED = simply(new ItemPack(), "pack_"+EnumDyeColor.RED.getName().toLowerCase());
-	public static final Item PACK_BLACK = simply(new ItemPack(), "pack_"+EnumDyeColor.BLACK.getName().toLowerCase());
-	public static final Item PACK_BLUE = simply(new ItemPack(), "pack_"+EnumDyeColor.BLUE.getName().toLowerCase());
-	public static final Item PACK_BROWN = simply(new ItemPack(), "pack_"+EnumDyeColor.BROWN.getName().toLowerCase());
-	public static final Item PACK_CYAN = simply(new ItemPack(), "pack_"+EnumDyeColor.CYAN.getName().toLowerCase());
-	public static final Item PACK_GRAY = simply(new ItemPack(), "pack_"+EnumDyeColor.GRAY.getName().toLowerCase());
-	public static final Item PACK_GREEN = simply(new ItemPack(), "pack_"+EnumDyeColor.GREEN.getName().toLowerCase());
-	public static final Item PACK_LIGHT_BLUE = simply(new ItemPack(), "pack_"+EnumDyeColor.LIGHT_BLUE.getName().toLowerCase());
-	public static final Item PACK_LIME = simply(new ItemPack(), "pack_"+EnumDyeColor.LIME.getName().toLowerCase());
-	public static final Item PACK_MAGENTA = simply(new ItemPack(), "pack_"+EnumDyeColor.MAGENTA.getName().toLowerCase());
-	public static final Item PACK_ORANGE = simply(new ItemPack(), "pack_"+EnumDyeColor.ORANGE.getName().toLowerCase());
-	public static final Item PACK_PINK = simply(new ItemPack(), "pack_"+EnumDyeColor.PINK.getName().toLowerCase());
-	public static final Item PACK_PURPLE = simply(new ItemPack(), "pack_"+EnumDyeColor.PURPLE.getName().toLowerCase());
-	public static final Item PACK_YELLOW = simply(new ItemPack(), "pack_"+EnumDyeColor.YELLOW.getName().toLowerCase());
-	public static final Item PACK_SILVER = simply(new ItemPack(), "pack_"+EnumDyeColor.SILVER.getName().toLowerCase());
-
-	public static final Item ENDER_PACK = simply(new ItemEnderPack(), "ender_pack");
 
 	public static final Item RAWHIDE_DEER = simply(new Item(), "rawhide_deer");
 	public static final Item RAWHIDE_BOAR = simply(new Item(), "rawhide_boar");
@@ -102,29 +82,6 @@ public final class LWItems {
 		registry.register(TANNIN_BALL);
 		registry.register(TANNIN_BOTTLE);
 		
-		if(!ConfigLeatherWorks.disableAllPacks){
-			registry.register(PACK_BROWN);
-			if(!ConfigLeatherWorks.disableColoredPacks){
-				registry.register(PACK_RED);
-				registry.register(PACK_ORANGE);
-				registry.register(PACK_YELLOW);
-				registry.register(PACK_LIME); 
-				registry.register(PACK_GREEN);
-				registry.register(PACK_CYAN);
-				registry.register(PACK_LIGHT_BLUE);
-				registry.register(PACK_BLUE); 
-				registry.register(PACK_PURPLE);
-				registry.register(PACK_MAGENTA);
-				registry.register(PACK_PINK);
-				registry.register(PACK_SILVER);
-				registry.register(PACK_GRAY); 
-				registry.register(PACK_BLACK);
-			}
-			if(!ConfigLeatherWorks.disableEnderPack){
-				registry.register(ENDER_PACK);
-			}
-		}
-		
 		registerItemBlock(registry, LWBlocks.BARREL_OAK);
 		registerItemBlock(registry, LWBlocks.BARREL_SPRUCE);
 		registerItemBlock(registry, LWBlocks.BARREL_BIRCH);
@@ -156,25 +113,6 @@ public final class LWItems {
 		registerItemBlock(registry, LWBlocks.DRYING_RACK_JUNGLE);
 		registerItemBlock(registry, LWBlocks.DRYING_RACK_ACACIA);
 		registerItemBlock(registry, LWBlocks.DRYING_RACK_DARKOAK);
-		if(!ConfigLeatherWorks.disableTrunk){
-		registerItemBlock(registry, LWBlocks.LEATHER_TRUNK);
-			if(!ConfigLeatherWorks.disableColoredTrunks){
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_RED);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_ORANGE);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_YELLOW);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_LIME);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_GREEN);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_CYAN);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_LIGHT_BLUE);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_BLUE);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_PURPLE);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_MAGENTA);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_PINK);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_GRAY);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_SILVER);
-				registerItemBlock(registry, LWBlocks.LEATHER_TRUNK_BLACK);
-			}
-		}
 	}
 
 	private static void registerItemBlock(IForgeRegistry<Item> registry, Block block) {
