@@ -1,7 +1,6 @@
 {
-    "parent": "leatherworks:block/leather_trunk",
-	"textures": {
-
-		"texture": "leatherworks:models/trunk_gray"
-	}
+  "parent": "leatherworks:block/leather_trunk",
+  "textures": {
+    "texture": "leatherworks:models/trunk_gray"
+  }
 }

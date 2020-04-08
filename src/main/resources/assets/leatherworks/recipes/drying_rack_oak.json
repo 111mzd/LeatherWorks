@@ -3,13 +3,15 @@
     "item": "leatherworks:drying_rack_oak"
   },
   "pattern": [
-    "   ","   ","SSS"
+    "   ",
+    "   ",
+    "SSS"
   ],
   "type": "minecraft:crafting_shaped",
   "key": {
     "S": {
       "item": "minecraft:wooden_slab",
-	  "data":0
+      "data": 0
     }
   }
 }

@@ -21,7 +21,6 @@ public class ConfigLeatherWorks {
 	public static int leatherDryingTime;
 	public static float leatherFailureChance;
 	public static boolean allowBatchProcessing;
-	public static boolean consumeFlint;
 	public static boolean singleBarkItem;
 	public static boolean useExternalDebarking;
 	
@@ -30,11 +29,10 @@ public class ConfigLeatherWorks {
 	public static void load(Configuration config) {
 		config.load();
 		
-		leatherDryingTime = config.getInt("leatherDryingTime", "general", 9600, 1, 2147483647, "Time in ticks to dry leather. 1 second is 20 ticks. Default is 8 mins");
-		leatherFailureChance = config.getFloat("leatherFailureChance", "general", 5f, 0f, 100f, "Percent chance that drying leather will fail and return rotten flesh");
+		leatherDryingTime = config.getInt("leatherDryingTime", "general", 2400, 1, 2147483647, "Time in ticks to dry leather. 1 second is 20 ticks. Default is 2 mins");
+		leatherFailureChance = config.getFloat("leatherFailureChance", "general", 0f, 0f, 100f, "Percent chance that drying leather will fail and return rotten flesh");
 
-		allowBatchProcessing = config.getBoolean("allowBatchProcessing", "general", true, "If disabled, 1 unit of water or tannin will be required to process each hide.");
-		consumeFlint = config.getBoolean("consumeFlint", "general", false, "If enabled, Scraping hides will consume flint");
+		allowBatchProcessing = config.getBoolean("allowBatchProcessing", "general", false, "If disabled, 1 unit of water or tannin will be required to process each hide.");
 		singleBarkItem = config.getBoolean("singleBarkItem", "general", false, "If enabled, Leatherworks will only use one bark item");
 		useExternalDebarking = config.getBoolean("useExternalDebarking", "general", false, "If enabled, Leatherworks will disable its' debarking features so you can handle it with other mods.");
 

@@ -1,7 +1,6 @@
 {
-    "parent": "leatherworks:block/leather_trunk",
-	"textures": {
-
-		"texture": "leatherworks:models/trunk_lime"
-	}
+  "parent": "leatherworks:block/leather_trunk",
+  "textures": {
+    "texture": "leatherworks:models/trunk_lime"
+  }
 }

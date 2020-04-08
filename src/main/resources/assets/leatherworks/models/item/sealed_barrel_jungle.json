@@ -1,7 +1,7 @@
 {
-    "parent": "block/cube_column",
-    "textures": {
-        "end": "leatherworks:blocks/barrel_top_jungle",
-        "side": "leatherworks:blocks/barrel_side_jungle"
-    }
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "leatherworks:blocks/barrel_top_jungle",
+    "side": "leatherworks:blocks/barrel_side_jungle"
+  }
 }

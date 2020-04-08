@@ -1,5 +1,7 @@
 {
-    "variants": {
-        "normal": { "model": "leatherworks:leather_trunk" }
+  "variants": {
+    "normal": {
+      "model": "leatherworks:leather_trunk"
     }
+  }
 }
